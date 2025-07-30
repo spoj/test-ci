@@ -59,8 +59,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           assetNamePattern: 'myapp-[version]-${{ env.BUILD_TIMESTAMP }}-${{ github.sha }}[ext]'
-          tagName: v__VERSION__-${{steps.date.outputs.time}}
-          releaseName: "release v__VERSION__-${{steps.date.outputs.time}}"
+          tagName: v__VERSION__-${{env.BUILD_TIMESTAMP}}
+          releaseName: "release v__VERSION__-${{env.BUILD_TIMESTAMP}}"
           releaseBody: "See the assets to download this version and install."
           releaseDraft: true
           prerelease: false
