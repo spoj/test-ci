@@ -32,7 +32,7 @@ jobs:
         id: date
         uses: Kaven-Universe/github-action-current-date-time@v1
         with:
-          format: "YYYY-MM-DDTHH:mm"
+          format: "YYYYMMDDHHmmss"
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
